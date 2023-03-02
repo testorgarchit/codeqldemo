@@ -31,7 +31,11 @@ pipeline {
             }
         }
          stage('Clone Repository') {
+             steps {
+                script {
             git url: 'https://github.com/testorgarchit/codeqldemo.git'
         }  
+                 }
+            }
     }   
 }
