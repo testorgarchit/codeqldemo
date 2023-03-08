@@ -36,10 +36,10 @@ pipeline {
           stage('Download CodeQL CLI Bundle') {
             steps {
                script { 
-                 sh "wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-win64.tar.gz -O ..\codeql-bundle-win64.tar.gz"
-                sh "tar xzvf ..\codeql-bundle-win64.tar.gz -C ..\"
-                sh "del ..\codeql-bundle-win64.tar.gz"
-                sh "cd ..\; set PATH=%cd%\codeql;%PATH%"
+                 sh "wget https://github.com/github/codeql-action/releases/latest/download/codeql-bundle-win64.tar.gz "
+                //sh "tar xzvf ..\codeql-bundle-win64.tar.gz -C ..\"
+                //sh "del ..\codeql-bundle-win64.tar.gz"
+                //sh "cd ..\; set PATH=%cd%\codeql;%PATH%"
                }
                }
         }
