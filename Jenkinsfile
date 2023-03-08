@@ -30,7 +30,7 @@ pipeline {
      stage("wget") {
             steps {
                 script {
-                   sh "/usr/local/bin/wget 'https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'"
+                   sh "C:/Users/archi/wget 'https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'"
                 }
             }
         }
