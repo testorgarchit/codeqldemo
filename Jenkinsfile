@@ -6,6 +6,7 @@ pipeline {
         stage("init") {
             steps {
                 script {
+                 sh '${WORKSPACE}/jenkins/pipeline/update-jenkins-plugins-ppln/update-plugins.sh'
                    echo "init"
                 }
             }
