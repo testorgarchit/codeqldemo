@@ -19,13 +19,7 @@ pipeline {
             }
         }
          
-        stage("deploy") {
-            steps {
-                script {
-                    echo "deploy"
-                }
-            }
-        }
+        
          stage('Clone Repository') {
              steps {  
                 script { git url: 'https://github.com/testorgarchit/codeqldemo.git'
@@ -33,6 +27,13 @@ pipeline {
         }  
                  }
             }
+     stage("wget") {
+            steps {
+                script {
+                   sh "/usr/local/bin/wget 'https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip'"
+                }
+            }
+        }
           stage('Download CodeQL CLI Bundle') {
             steps {
                script { 
